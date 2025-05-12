@@ -1,5 +1,9 @@
 const { Sequelize } = require("sequelize");
-require("dotenv").config();
+const path = require("path");
+
+require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
+
+console.log(process.env, 'PROCESS ENV');
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,
@@ -7,7 +11,7 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     host: process.env.DB_HOST,
-    dialect: "sql", // ou 'mysql', 'sqlite', dependendo do banco usado
+    dialect: "postgres", // ou 'mysql', 'sqlite', dependendo do banco usado
   }
 );
 
