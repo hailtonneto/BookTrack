@@ -1,13 +1,20 @@
 const express = require("express");
 const app = express();
+const sequelize = require("./config/sequelize");
+const usuarioRoutes = require("./routes/usuarios");
 
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("API está funcionando!");
-});
+app.use("/usuarios", usuarioRoutes);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+
+app.listen(PORT, async () => {
+  try {
+    await sequelize.authenticate();
+    console.log("Conexão com o banco de dados bem-sucedida!");
+    await sequelize.sync({ force: false }); // Sincroniza o banco sem apagar dados
+    console.log(`Servidor rodando na porta ${PORT}`);
+  } catch (error) {
+    console.error("Erro ao conectar com o banco de dados:", error);
+  }
 });
