@@ -28,26 +28,6 @@ API RESTful para gerenciamento de leituras de livros. Permite que usuários cada
 
 ---
 
-## 📁 Estrutura do Projeto
-
-```
-
-📦 booktrack-api
-├── 📂 controllers
-├── 📂 services
-├── 📂 models
-├── 📂 routes
-├── 📂 middlewares
-├── 📂 utils
-├── 📄 app.js
-├── 📄 server.js
-├── 📄 .env.example
-└── 📄 README.md
-
-````
-
----
-
 ## 🧰 Como rodar o projeto localmente
 
 ### 1. Clone o repositório:
