@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const LivroController = require("../controllers/LivroController");
-const verificarToken = require("../middlewares/authMiddleware"); 
 
+// CRUD de Livros
 router.post("/", LivroController.criar);
 router.get("/", LivroController.listar);
 router.get("/:id", LivroController.buscarPorId);
-router.put("/:id", verificarToken, LivroController.atualizar);
-router.delete("/:id", verificarToken, LivroController.deletar);
+router.put("/:id", LivroController.atualizar);
+router.delete("/:id", LivroController.deletar);
 
 module.exports = router;
