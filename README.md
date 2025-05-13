@@ -12,9 +12,6 @@ API RESTful para gerenciamento de leituras de livros. Permite que usuários cada
 - Validações de regras de negócio
 - Controle de versão com Git (branch por feature)
 
-### 🌟 Funcionalidades diferenciais implementadas:
-- Autenticação com login e senha (JWT + bcrypt)
-
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -60,22 +57,6 @@ npm start
 ```
 
 Servidor disponível em: `http://localhost:3000`
-
----
-
-## 🧪 Testando com o Insomnia
-
-1. Após iniciar o servidor local, abra o Insomnia.
-2. Importe o arquivo `.json` com as rotas (caso tenha incluído no repositório):
-
-   * Vá em `Arquivo > Importar > De Arquivo`.
-3. Faça uma requisição para `POST /login` com email e senha de um usuário cadastrado.
-4. Copie o token JWT retornado.
-5. Em rotas protegidas, adicione no header:
-
-   ```
-   Authorization: Bearer <seu_token>
-   ```
 
 ---
 
