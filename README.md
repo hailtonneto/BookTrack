@@ -96,5 +96,5 @@ Servidor disponível em: `http://localhost:3000`
 | POST   | `/login`      | Realizar login                                   |
 | GET    | `/livros`     | Listar livros do usuário autenticado             |
 | POST   | `/livros`     | Cadastrar um novo livro                          |
-| PATCH  | `/livros/:id` | Atualizar um livro (exceto se status for "Lido") |
+| PUT  | `/livros/:id` | Atualizar um livro (exceto se status for "Lido") |
 | DELETE | `/livros/:id` | Excluir um livro                                 |
